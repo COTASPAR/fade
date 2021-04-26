@@ -11,5 +11,5 @@ cd pico-sdk
 git submodule update --init
 cd ..
 sudo apt update
-sudo apt install -y cmake gcc-arm-none-eabi build-essential
+sudo apt install -y cmake gcc-arm-none-eabi build-essential wget
 cd ..
