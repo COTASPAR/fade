@@ -1,4 +1,3 @@
-cd ~
 mkdir pico
 cd pico
 git clone -b master https://github.com/raspberrypi/pico-sdk.git
