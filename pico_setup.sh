@@ -102,8 +102,8 @@ do
     cd $DEST
     mkdir build
     cd build
-    #cmake ../
-    #make -j$JNUM
+    cmake ../
+    make -j$JNUM
 
     if [[ "$REPO" == "picotool" ]]; then
         echo "Installing picotool to /usr/local/bin/picotool"
