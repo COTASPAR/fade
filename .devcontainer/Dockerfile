@@ -7,9 +7,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 # ** [Optional] Uncomment this section to install additional packages. **
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
-RUN mkdir pico && cd /pico/ && git clone -b master https://github.com/raspberrypi/pico-sdk.git
-RUN cd /pico-sdk/ && git submodule update --init
-RUN cd ..
+RUN mkdir pico && cd /pico/ && git clone -b master https://github.com/raspberrypi/pico-sdk.git 
+WORKDIR pico-sdk 
+RUN git submodule update --init 
 RUN sudo apt update
 RUN sudo apt install -y cmake gcc-arm-none-eabi build-essential wget
 RUN cd ..
